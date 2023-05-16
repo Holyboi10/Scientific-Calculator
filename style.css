@@ -86,3 +86,10 @@ input{
     background-color: red;
     color: white;
 }
+@media screen and (min-device-width: 398px) {
+    #main-container{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+   }
