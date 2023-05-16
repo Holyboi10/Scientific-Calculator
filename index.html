@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main-container">
+    <input type="text" placeholder="0" id="display">
+    <div id="container">
+        <button onclick="buttons()">shift</button>
+        <!-- <button onclick="buttons()"></button> -->
+        <button onclick="buttons()">Mode</button>
+        <button onclick="power()">!</button>
+        <button onclick="buttons()">nCr</button>
+        <!-- <button onclick="buttons()"></button> -->
+        <button onclick="buttons()">Pol(</button>
+        <button onclick="pwer()">x`1</button>
+        <button onclick="buttons()">a b/c</button>
+        <button onclick="squarert()">sqrt</button>
+        <button onclick="buttons()">x`2</button>
+        <!-- <button onclick="buttons()"></button> -->
+        <button onclick="log()">Log</button>
+        <button onclick="buttons()">In</button>
+        <button onclick="buttons()">(-)</button>
+        <button onclick="buttons()">>><<</button>
+        <button onclick="buttons()">hyp</button>
+        <button onclick="sin()">sin</button>
+        <button onclick="cos()">cos</button>
+        <button onclick="tan()">tan</button>
+        <button onclick="buttons()">RCL</button>
+        <button onclick="buttons()">Eng</button>
+        <button onclick="buttons()">(</button>
+        <button onclick="buttons()">)</button>
+        <button onclick="buttons()">'</button>
+        <!-- <button onclick="buttons()">M+</button> -->
+    </div>
+    <div id="b-container">
+        <button onclick="buttons(7)">7</button>
+        <button onclick="buttons(8)">8</button>
+        <button onclick="buttons(9)">9</button>
+        <button onclick="del()">DEL</button>
+        <button onclick="clean()">AC</button>
+        <button onclick="buttons(4)">4</button>
+        <button onclick="buttons(5)">5</button>
+        <button onclick="buttons(6)">6</button>
+        <button onclick="buttons(`*`)">X</button>
+        <button onclick="buttons(`/`)">/</button>
+        <button onclick="buttons(1)">1</button>
+        <button onclick="buttons(2)">2</button>
+        <button onclick="buttons(3)">3</button>
+        <button onclick="buttons(`+`)">+</button>
+        <button onclick="buttons(`-`)">-</button>
+        <button onclick="buttons(0)">0</button>
+        <button onclick="buttons(`.`)">.</button>
+        <button onclick="buttons()">EXP</button>
+        <button onclick="buttons()">Ans</button>
+        <button onclick="calculate()">=</button>
+
+    </div>
+    <!-- <button onclick="enter()">enter</button> -->
+</div>
+
+
+<script>
+    var display = document.getElementById("display")
+    function buttons(x){
+        display.value += x
+
+    }
+    function calculate(){
+        display.value= eval(display.value)
+    }
+    // function enter(){
+    //     console.log(Math)
+    // }
+    function sin(){
+        display.value = Math.sin(display.value)
+    }
+    function cos(){
+        display.value = Math.cos(display.value)
+    }
+    function tan(){
+        display.value = Math.tan(display.value)
+    }
+    function clean(){
+        display.value = ""
+    }
+    function del(){
+        delete display.value
+    }
+    function log (){
+        display.value = Math.log(display.value)
+    }
+    function squarert (){
+        display.value = Math.sqrt(display.value)
+    }
+</script>
+
+
+
+
+
+    
+</body>
+</html>
