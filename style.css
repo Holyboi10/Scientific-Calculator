@@ -88,8 +88,8 @@ input{
 }
 @media screen and (min-device-width: 398px) {
     #main-container{
-        width: 60vw;
-        height: 100vh;
+        width: fit-content;
+        /* height: 100vh; */
         margin-top: 20;
         overflow-y: hidden;
     }
